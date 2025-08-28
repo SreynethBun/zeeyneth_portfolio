@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+body{
+    @apply bg-darkgreen flex items-center text-white justify-center;
+}
+/* apply tailwind styles to custom bullet classes */
+.custom-bullet {
+  @apply  w-3 h-3 rounded-full mx-1 gap-20 !mt-10;
+}
+
+.bullet-2 {
+  @apply bg-red-500;
+}
+
+.bullet-3 {
+  @apply bg-green-500;
+}
+
+.bullet-4 {
+  @apply bg-blue-500;
+}
+
+
+@theme{
+    --font-Borel: "Borel", sans-serif;
+    --font-EduNsw: 'Edu NSW ACT Hand Cursive', sans-serif;
+    --font-Macondo: "Macondo", sans-serif;
+    --font-Libertinus: "Libertinus Serif", sans-serif;
+    --font-DM: "DM Serif Text", sans-serif;
+    --color-midnight: #121063;
+    --color-tahiti: #3ab7bf;
+    --color-bermuda: #4ef7bf;
+    --color-darkgreen:#3a4e50;
+    --color-darkgreen001: #355E47;
+
+}
+
+
+ .slide-container {
+  
+  perspective: 10000px;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate 40s infinite linear;
+}
+
+.slide {
+  position: absolute;
+  width: 60%;
+  height: 80%;
+  left: 20%;
+  top: 10%;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 4 sides of the cube */
+.slide:nth-child(1) { transform: rotateY(0deg) translateZ(400px);}
+.slide:nth-child(2) { transform: rotateY(90deg) translateZ(400px);}
+.slide:nth-child(3) { transform: rotateY(180deg) translateZ(400px);}
+.slide:nth-child(4) { transform: rotateY(270deg) translateZ(400px);}
+
+@keyframes rotate {
+  0%   { transform: rotateY(0deg); }
+  25%  { transform: rotateY(90deg); }
+  50%  { transform: rotateY(180deg); }
+  75%  { transform: rotateY(270deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+
