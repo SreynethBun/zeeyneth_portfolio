@@ -1,7 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { portSlide2 } from "../mockData/Data";
-
+import { IoClose } from "react-icons/io5";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import Img1 from '../../assets/image/1.png'
@@ -14,6 +15,12 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { IoArrowBackOutline, IoArrowForwardOutline } from "react-icons/io5";
 
 const Portfolio = () => {
+  
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleView = () => {
+    setIsOpen(!isOpen);
+  };
   
   return (
     <div className="w-screen px-15 mt-25">
@@ -80,14 +87,13 @@ const Portfolio = () => {
                     <img
                         src={item.img}
                         alt={`slide_${idx}`}
-                        className="w-full h-full object-contain"
+                        
+                        onClick={toggleView}
+                        className="w-full h-full gap-1 object-cover rounded-xl cursor-pointer hover:scale-95 transition"
                     />
                     </SwiperSlide>
                 ))}
                 <div className="slider-controler">
-                    <div className="">
-                    
-                    </div>
                     <div className="swiper-pagination "></div>
                 </div>
                 </Swiper>
@@ -125,6 +131,8 @@ const Portfolio = () => {
         ))}
       </div>
     </div>
+
+     
 
 </div>
   );

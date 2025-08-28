@@ -17,7 +17,7 @@ const Footer = () => {
   ))
 }
         </div>
-        <p className='text-center text-white/70 font-light'>&copy; 2025 Personal Portfolio. All rights reservered.</p>
+        <p className='text-center text-white/70 font-light'>&copy; 2025 Personal Portfolio, Design with React + Tailwindcss</p>
     </div>
   )
 }

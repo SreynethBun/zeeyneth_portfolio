@@ -58,8 +58,8 @@ const Navbar = () => {
                 {NavBarMenu.map((item, index) => (
                   <li key={index}>
                     <Link to={`/${item.path}`}>
-                      <div className="w-23 h-15 border-0 hover:bg-amber-600 rounded-l-2xl pr-10 pl-5 py-1 hover:border-b-4 hover:border-white transition-all">
-                        <p className="text-white">{item.icon}</p>
+                      <div className="w-23 h-15 border-0 hover:bg-amber-600 rounded-l-2xl pr-10 pl-5 py-1 hover:border-b-4 hover:scale-110 hover:border-white transition-all">
+                        <p className="text-white hover:-rotate-3">{item.icon}</p>
                       </div>
                     </Link>
                   </li>
