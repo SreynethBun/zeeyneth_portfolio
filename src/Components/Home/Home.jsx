@@ -13,10 +13,10 @@ const Home = () => {
             
               <span className='text-3xl text-white/80 font-Macondo leading-25'>Hello my name is Sreyneth</span>
               <p className='font-extralight text-2xl leading-10'>
-                Motivated career changer with a growing
-                skill set in Software Engineer. Skilled for self
+                Motivated in career changer with a growing
+                skill set in Software Engineer. For self
                 learing in Python, Django, React, TailwindCSS.
-                . Eager to contribute as a junior
+                Eager to contribute as a junior
                 software engineer, with strong problemsolving skills and a commitment to
                 continuous learning.
               </p>
